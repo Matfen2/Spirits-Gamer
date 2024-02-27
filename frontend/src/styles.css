@@ -1,0 +1,525 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  display: block;
+}
+
+@font-face {
+  font-family: Striker;
+  src: url("/assets/font/Striker.otf");
+}
+@font-face {
+  font-family: Emizen;
+  src: url("/assets/font/Emizen.otf");
+}
+@font-face {
+  font-family: ClassicRobot;
+  src: url("/assets/font/Classic Robot Condensed Italic.otf");
+}
+#carousel #carouselGaming .carousel-inner .carousel-item .containGaming {
+  height: 900px;
+  margin-bottom: -100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .navbar-brand {
+  color: azure;
+  font-size: 2.4em;
+  letter-spacing: 2px;
+  font-family: ClassicRobot;
+  text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0, 0, 0, 0.02);
+}
+#carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid #btnBar {
+  display: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4em;
+  color: azure;
+  background: transparent;
+  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0, 0, 0, 0.15);
+}
+#carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .collapse .navbar-nav .nav-item form {
+  top: 2%;
+  right: -34%;
+  position: relative;
+  transform: translate(10%, 0%);
+  max-width: 60%;
+  margin-top: 7px;
+  font-family: Striker;
+}
+#carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo {
+  top: 50%;
+  left: 20%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+#carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .img-fluid {
+  top: 50%;
+  left: 5%;
+  height: 150px;
+  max-width: 400px;
+  position: relative;
+  transform: translate(-50%, -10%);
+}
+#carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .infoPrice {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+#carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .infoPrice .promo {
+  height: 35px;
+  padding: 0px 5px 2px 5px;
+  font-size: 1.3em;
+  color: azure;
+  border-radius: 10px;
+  font-family: Emizen;
+  background-color: rgb(158, 65, 7);
+  border: 1px solid azure;
+  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
+}
+#carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .infoPrice .priceInfo {
+  height: 35px;
+  width: 118px;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+  border-radius: 10px;
+  padding-left: 5px;
+  background-color: darkgreen;
+  border: 1px solid azure;
+}
+#carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .infoPrice .priceInfo .price {
+  margin-left: 5px;
+  font-size: 1.3em;
+  color: azure;
+  font-family: Emizen;
+  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0, 0, 0, 0.15);
+}
+#carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .infoPrice .priceInfo #btnAdd {
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  border: none;
+  font-size: 1.2em;
+  color: azure;
+  background: transparent;
+  transition: all 0.25ms ease;
+  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0, 0, 0, 0.15);
+}
+#carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .infoPrice .priceInfo #btnAdd:hover {
+  transform: scale(1.2);
+}
+#carousel .containSearch {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/assets/pict/search.jpeg");
+}
+#carousel .containSearch .results {
+  color: azure;
+  text-align: center;
+  padding-top: 7px;
+  font-family: Striker;
+  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
+}
+#carousel .containSearch .listResults .resultSearch {
+  height: 400px;
+  overflow: auto;
+  margin: -20px auto;
+}
+#carousel .containSearch .listResults .resultSearch .col-lg-3 {
+  margin: auto;
+  display: block;
+}
+#carousel .containSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .img-fluid {
+  display: block;
+  height: 300px;
+  margin: auto;
+  max-width: 350px;
+  border-radius: 10px;
+}
+#carousel .containSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .d-flex {
+  text-align: center;
+  justify-content: center;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+  overflow: auto;
+  max-width: 800px;
+}
+#carousel .containSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .d-flex .title {
+  font-size: 1.4em;
+  color: azure;
+  text-shadow: 2px 2px 2px #000000, 4px 4px 0px rgba(255, 255, 255, 0.15);
+}
+#carousel .containSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .d-flex .price {
+  margin-left: 5px;
+  font-size: 1.3em;
+  color: azure;
+  text-shadow: 0px 2px 0px #000000, 2px 4px 0px rgb(0, 0, 0);
+}
+#carousel #release {
+  background-color: rgb(50, 50, 50);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#carousel #release .listBestMoments {
+  height: 350px;
+}
+#carousel #release .listBestMoments .list {
+  width: 100%;
+  margin: auto;
+  padding-top: 10px;
+  max-width: 800px;
+}
+#carousel #release .listBestMoments .list .col-lg-6 .best {
+  width: 800px;
+  cursor: pointer;
+  font-size: 1.5em;
+  margin-right: 60px;
+  color: azure;
+  font-family: Striker;
+  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
+}
+#carousel #release .listBestMoments .list .col-lg-6 .best:hover {
+  color: black;
+  text-shadow: 2px 2px 0px #ffffff, 5px 4px 0px rgba(255, 255, 255, 0.15);
+}
+#carousel #release .listBestMoments .list .col-lg-6 .next {
+  width: 800px;
+  cursor: pointer;
+  font-size: 1.5em;
+  margin-left: 60px;
+  color: azure;
+  font-family: Striker;
+  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
+}
+#carousel #release .listBestMoments .list .col-lg-6 .next:hover {
+  color: black;
+  text-shadow: 2px 2px 0px #ffffff, 5px 4px 0px rgba(255, 255, 255, 0.15);
+}
+#carousel #release .listBestMoments .containMoments .showGames .games {
+  width: 100%;
+  margin: auto;
+  max-width: 950px;
+}
+#carousel #release .listBestMoments .containMoments .showGames .games .col-lg-4 .img-fluid {
+  height: 300px;
+  border-radius: 15px;
+}
+#carousel #release footer {
+  padding-top: 36px;
+  padding-bottom: 15px;
+}
+#carousel #release footer .copy {
+  font-size: 1.7em;
+  color: azure;
+  font-family: Emizen;
+  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
+}
+
+#showSearch {
+  height: 120px;
+  width: 400px;
+  border-radius: 0px 0px 0px 10px;
+  background-color: black;
+  border: 1px solid azure;
+}
+#showSearch .offcanvas-header {
+  width: 65%;
+  height: 20px;
+}
+#showSearch .offcanvas-header #btnClose {
+  position: relative;
+  left: 90%;
+  border: none;
+  font-size: 1.4em;
+  color: azure;
+  background-color: transparent;
+}
+#showSearch .offcanvas-body .d-flex {
+  max-width: 60%;
+}
+
+@media screen and (max-width: 1440px) {
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .collapse .navbar-nav .nav-item form {
+    right: -16%;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .infoPrice {
+    top: 50%;
+    left: 48%;
+    position: relative;
+    transform: translate(-50%, 0%);
+  }
+}
+@media screen and (max-width: 1024px) {
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .navbar-brand {
+    margin-left: 0px;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .collapse .navbar-nav .nav-item form {
+    right: -34%;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo {
+    top: 54%;
+    left: 45%;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .infoPrice {
+    top: 50%;
+    left: 48%;
+    position: relative;
+    transform: translate(-53%, 0%);
+  }
+  #carousel #carouselGaming .carousel-indicators {
+    margin-right: 170px;
+  }
+  #carousel .containSearch .results {
+    font-size: 1.4em;
+  }
+  #carousel #release .listBestMoments .list {
+    display: flex;
+    flex-direction: column;
+  }
+  #carousel #release .listBestMoments .list .col-lg-6 {
+    text-align: center;
+  }
+  #carousel #release .listBestMoments .list .col-lg-6 .best {
+    width: 770px;
+  }
+  #carousel #release .listBestMoments .list .col-lg-6 .next {
+    width: 640px;
+    margin-right: 180px;
+  }
+  #carousel #release .listBestMoments .containMoments .showGames .games {
+    margin-right: 14%;
+    max-width: 750px;
+  }
+  #carousel #release footer {
+    padding-top: 86px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 970px) {
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar {
+    width: 85%;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid #btnBar {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar {
+    width: 93%;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .navbar-brand {
+    margin-left: 5px;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid #btnBar {
+    margin-right: -50px;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo {
+    left: 50%;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .img-fluid {
+    left: 2%;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .infoPrice {
+    top: 50%;
+    left: 39%;
+    position: relative;
+    transform: translate(-50%, -10%);
+  }
+  #carousel #carouselGaming .carousel-indicators {
+    margin-right: 100px;
+    padding-bottom: 5px;
+  }
+  #carousel .containSearch .results {
+    font-size: 1.2em;
+  }
+  #carousel #release .listBestMoments .containMoments .showGames .games {
+    height: 345px;
+    overflow: auto;
+    max-width: 400px;
+    margin-right: 170px;
+  }
+  #carousel #release .listBestMoments .containMoments .showGames .games .col-lg-4 .img-fluid {
+    height: 320px;
+    margin: 10px 0px 10px 0px;
+  }
+  #carousel #release footer {
+    padding-top: 106px;
+    padding-right: 0px;
+  }
+  #showSearch {
+    width: 270px;
+  }
+  #showSearch .offcanvas-header #btnClose {
+    left: 132%;
+  }
+  #showSearch .offcanvas-body .d-flex {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 425px) {
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .navbar-brand {
+    font-size: 1.8em;
+    margin-left: -5px;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid #btnBar {
+    margin-right: -35px;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo {
+    top: 57%;
+    left: 48%;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .img-fluid {
+    height: 140px;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .infoPrice {
+    left: 31%;
+  }
+  #carousel #carouselGaming .carousel-indicators {
+    margin-right: 70px;
+    padding-bottom: -5px;
+  }
+  #carousel .containSearch .results {
+    font-size: 1.4em;
+  }
+  #carousel .containSearch .listResults .resultSearch {
+    height: 300px;
+    margin: 20px auto;
+  }
+  #carousel .containSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .img-fluid {
+    height: 260px;
+  }
+  #carousel #release .listBestMoments {
+    height: 350px;
+  }
+  #carousel #release .listBestMoments .list .col-lg-6 .best {
+    width: 390px;
+  }
+  #carousel #release .listBestMoments .list .col-lg-6 .next {
+    width: 360px;
+    margin-left: 10px;
+  }
+  #carousel #release .listBestMoments .containMoments .showGames .games {
+    margin-right: -30px;
+    max-width: 600px;
+  }
+  #carousel #release .listBestMoments .containMoments .showGames .games .col-lg-4 .img-fluid {
+    max-width: 340px;
+  }
+}
+@media screen and (max-width: 375px) {
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo {
+    top: 57%;
+    left: 48%;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .img-fluid {
+    height: 140px;
+    max-width: 300px;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .infoPrice {
+    left: 27%;
+  }
+  #carousel #carouselGaming .carousel-indicators {
+    margin-right: 70px;
+    padding-bottom: -5px;
+  }
+  #carousel .containSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .img-fluid {
+    height: 255px;
+  }
+  #carousel #release .listBestMoments {
+    height: 350px;
+  }
+  #carousel #release .listBestMoments .list .col-lg-6 .best {
+    width: 350px;
+  }
+  #carousel #release .listBestMoments .list .col-lg-6 .next {
+    width: 360px;
+    margin-left: -5px;
+  }
+  #carousel #release .listBestMoments .containMoments .showGames .games {
+    margin: -20px auto;
+    margin-right: -10px;
+    max-width: 600px;
+  }
+  #carousel #release .listBestMoments .containMoments .showGames .games .col-lg-4 .img-fluid {
+    height: 350px;
+    max-width: 340px;
+  }
+  #showSearch {
+    width: 230px;
+  }
+  #showSearch .offcanvas-header #btnClose {
+    left: 147%;
+  }
+  #showSearch .offcanvas-body .d-flex {
+    max-width: 95%;
+  }
+}
+@media screen and (max-width: 320px) {
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar {
+    width: 93%;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .navbar-brand {
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 1.4em;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid #btnBar {
+    margin-right: -20px;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo {
+    top: 60%;
+    left: 48%;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .img-fluid {
+    height: 120px;
+    max-width: 280px;
+  }
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .infoPrice {
+    left: 22%;
+  }
+  #carousel #carouselGaming .carousel-indicators {
+    margin-right: 65px;
+    padding-bottom: -5px;
+  }
+  #carousel #release .listBestMoments {
+    height: 350px;
+  }
+  #carousel #release .listBestMoments .list .col-lg-6 .best {
+    width: 290px;
+    font-size: 1.4em;
+  }
+  #carousel #release .listBestMoments .list .col-lg-6 .next {
+    width: 290px;
+    font-size: 1.4em;
+    margin-left: 0px;
+  }
+  #carousel #release .listBestMoments .containMoments .showGames .games {
+    height: 280px;
+    margin: -10px auto;
+    margin-right: 10px;
+    max-width: 600px;
+  }
+  #carousel #release .listBestMoments .containMoments .showGames .games .col-lg-4 .img-fluid {
+    height: 270px;
+    max-width: 340px;
+  }
+  #carousel #release footer {
+    padding-bottom: -15px;
+  }
+  #showSearch {
+    width: 363px;
+    border-radius: 0px;
+  }
+  #showSearch .offcanvas-header #btnClose {
+    left: 152%;
+  }
+  #showSearch .offcanvas-body .d-flex {
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=styles.css.map */

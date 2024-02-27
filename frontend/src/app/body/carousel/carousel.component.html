@@ -1,0 +1,92 @@
+<section id="carousel">
+  <div id="carouselGaming" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item" *ngFor="let tendance of tendances; let first = first" [class.active]="first">
+        <div class="containGaming" [style.background-image]="'url(' + tendance.background + ')'">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+              <a class="navbar-brand">SPIRIT'S GAMER</a>
+              <button id="btnBar" type="button" data-bs-toggle="offcanvas" data-bs-target="#showSearch"
+                aria-controls="showSearch"><i class="fas fa-bars"></i></button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <form class="d-flex" [formGroup]="search" (ngSubmit)="searchGame()">
+                      <input class="form-control me-2" type="search" id="title" name="title" formControlName="title"
+                        placeholder="Entrer un titre">
+                      <button class="btn btn-dark" type="submit" (click)="showSearch()"><i
+                          class="fa fa-search"></i></button>
+                    </form>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="moreInfo">
+            <img [src]="tendance.logo" class="img-fluid w-100" alt="gameLogo" />
+            <div class="infoPrice d-flex">
+              <p class="promo">{{ tendance.promo }}</p>
+              <div class="priceInfo d-flex">
+                <div class="price">{{ tendance.price }}</div>
+                <button type="button" id="btnAdd"><i class="fa-solid fa-cart-shopping"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-indicators">
+      <button type="button" style="border: 1px solid black; border-radius: 10px" data-bs-target="#carouselGaming" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" style="border: 1px solid black; border-radius: 10px" data-bs-target="#carouselGaming" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" style="border: 1px solid black; border-radius: 10px" data-bs-target="#carouselGaming" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+  </div>
+  <div class="containSearch" style="width: 100%" [@showSearch]="show ? 'open' : 'closed'">
+    <div *ngIf="searchedTitle">
+      <h3 class="results">Résultats de recherche pour : {{ searchedTitle }}</h3>
+    </div>
+
+    <!-- Affichage conditionnel des résultats -->
+    <div *ngIf="results && !loading" class="listResults">
+      <div class="resultSearch" style="display: flex; flex-wrap: wrap;">
+        <div class="col-lg-3" *ngFor="let result of results" appCardResults>
+          <div class="row">
+            <div class="col-lg-12">
+              <img [src]="result.pict" class="img-fluid w-100" alt="" />
+              <div class="d-flex">
+                <p class="title">{{ result.title }}</p>
+                <p class="price">{{ result.price }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Indicateur de chargement -->
+    <div *ngIf="loading">
+      Chargement en cours...
+    </div>
+
+    <!-- Affichage des erreurs -->
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+  </div>
+  <app-release></app-release>
+</section>
+
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="showSearch"
+  aria-labelledby="showSearch">
+  <div class="offcanvas-header">
+    <button type="button" id="btnClose" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="offcanvas-body">
+    <form class="d-flex" [formGroup]="search" (ngSubmit)="searchGame()">
+      <input class="form-control me-2" type="search" id="title" name="title" formControlName="title"
+        placeholder="Entrer un titre">
+      <button class="btn btn-dark" type="submit" (click)="showSearch()"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>

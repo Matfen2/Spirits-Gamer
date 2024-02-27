@@ -1,0 +1,773 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  display: block;
+}
+
+// MIXIN & ROOT
+$firstColor: azure;
+$secondColor: black;
+
+$firstFont: Striker;
+$secondFont: Emizen;
+$thirdFont: ClassicRobot;
+
+@mixin flex ($flexDirection) {
+  display: flex;
+  flex-direction: $flexDirection;
+}
+
+@font-face {
+  font-family: $firstFont;
+  src: url('/assets/font/Striker.otf');
+}
+
+@font-face {
+  font-family: $secondFont;
+  src: url('/assets/font/Emizen.otf');
+}
+
+@font-face {
+  font-family: $thirdFont;
+  src: url('/assets/font/Classic\ Robot\ Condensed\ Italic.otf');
+}
+
+#carousel {
+  #carouselGaming {
+    .carousel-inner {
+      .carousel-item {
+        .containGaming {
+          height: 900px;
+          margin-bottom: -100px;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          .navbar {
+            .container-fluid {
+              .navbar-brand {
+                color: $firstColor;
+                font-size: 2.4em;
+                letter-spacing: 2px;
+                font-family: $thirdFont;
+                text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0,0,0,0.02);
+              }
+              #btnBar {
+                display: none;
+                border: none;
+                cursor: pointer;
+                font-size: 1.4em;
+                color: $firstColor;
+                background: transparent;
+                text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0, 0, 0, 0.15);
+              }
+              .collapse {
+                .navbar-nav {
+                  .nav-item {
+                    form {
+                      top: 2%;
+                      right: -34%;
+                      position: relative;
+                      transform: translate(10%,0%);
+                      max-width: 60%;
+                      margin-top: 7px;
+                      font-family: $firstFont;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .moreInfo {
+            top: 50%;
+            left: 20%;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            .img-fluid {
+              top: 50%;
+              left: 5%;
+              height: 150px;
+              max-width: 400px;
+              position: relative;
+              transform: translate(-50%, -10%);
+            }
+            .infoPrice {
+              column-gap: 20px;
+              .promo {
+                height: 35px;
+                padding: 0px 5px 2px 5px;
+                font-size: 1.3em;
+                color: $firstColor;
+                border-radius: 10px;
+                font-family: $secondFont;
+                background-color: rgb(158, 65, 7);
+                border: 1px solid $firstColor;
+                text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
+              }
+              .priceInfo {
+                height: 35px;
+                width: 118px;
+                column-gap: 4px;
+                border-radius: 10px;
+                padding-left: 5px;
+                background-color: darkgreen;
+                border: 1px solid $firstColor;
+                .price {
+                  margin-left: 5px;
+                  font-size: 1.3em;
+                  color: $firstColor;
+                  font-family: $secondFont;
+                  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0, 0, 0, 0.15);
+                }
+                #btnAdd {
+                  width: 30px;
+                  height: 30px;
+                  padding: 2px;
+                  border: none;
+                  font-size: 1.2em;
+                  color: $firstColor;
+                  background: transparent;
+                  transition: all 0.25ms ease;
+                  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0, 0, 0, 0.15);
+                  &:hover {
+                    transform: scale(1.2);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .containSearch {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/assets/pict/search.jpeg');
+    .results {
+      color: $firstColor;
+      text-align: center;
+      padding-top: 7px;
+      font-family: $firstFont;
+      text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
+    }
+    .listResults {
+      .resultSearch {
+        height: 400px;
+        overflow: auto;
+        margin: -20px auto;
+        .col-lg-3 {
+          margin: auto;
+          display: block;
+          .row {
+            .col-lg-12 {
+              .img-fluid {
+                display: block;
+                height: 300px;
+                margin: auto;
+                max-width: 350px;
+                border-radius: 10px;
+              }
+              .d-flex {
+                text-align: center;
+                justify-content: center;
+                column-gap: 60px;
+                overflow: auto;
+                max-width: 800px;
+                .title {
+                  font-size: 1.4em;
+                  color: $firstColor;
+                  text-shadow: 2px 2px 2px #000000, 4px 4px 0px rgba(255, 255, 255, 0.15);
+                }
+                .price {
+                  margin-left: 5px;
+                  font-size: 1.3em;
+                  color: $firstColor;
+                  text-shadow: 0px 2px 0px #000000, 2px 4px 0px rgb(0, 0, 0);
+                }
+              }
+            }
+          }
+        }
+      }
+   }
+  }
+  #release {
+    background-color: rgb(50, 50, 50);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .listBestMoments {
+      height: 350px;
+      .list {
+        width: 100%;
+        margin: auto;
+        padding-top: 10px;
+        max-width: 800px;
+        .col-lg-6 {
+          .best {
+            width: 800px;
+            cursor: pointer;
+            font-size: 1.5em;
+            margin-right: 60px;
+            color: $firstColor;
+            font-family: $firstFont;
+            text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
+            &:hover {
+              color: $secondColor;
+              text-shadow: 2px 2px 0px #ffffff, 5px 4px 0px rgba(255, 255, 255, 0.15);
+            }
+          }
+          .next {
+            width: 800px;
+            cursor: pointer;
+            font-size: 1.5em;
+            margin-left: 60px;
+            color: $firstColor;
+            font-family: $firstFont;
+            text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
+            &:hover {
+              color: $secondColor;
+              text-shadow: 2px 2px 0px #ffffff, 5px 4px 0px rgba(255, 255, 255, 0.15);
+            }
+          }
+        }
+      }
+      .containMoments {
+        .showGames {
+          .games {
+            width: 100%;
+            margin: auto;
+            max-width: 950px;
+            .col-lg-4 {
+              .img-fluid {
+                height: 300px;
+                border-radius: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+    footer {
+      padding-top: 36px;
+      padding-bottom: 15px;
+      .copy {
+        font-size: 1.7em;
+        color: $firstColor;
+        font-family: $secondFont;
+        text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
+      }
+    }
+  }
+}
+
+#showSearch {
+  height: 120px;
+  width: 400px;
+  border-radius: 0px 0px 0px 10px;
+  background-color: $secondColor;
+  border: 1px solid $firstColor;
+  .offcanvas-header {
+    width: 65%;
+    height: 20px;
+    #btnClose {
+      position: relative;
+      left: 90%;
+      border: none;
+      font-size: 1.4em;
+      color: $firstColor;
+      background-color: transparent;
+    }
+  }
+  .offcanvas-body {
+      .d-flex {
+        max-width: 60%;
+      }
+    }
+}
+
+// MEDIA QUERRY
+@media screen and (max-width: 1440px) {
+  #carousel {
+    #carouselGaming {
+      .carousel-inner {
+        .carousel-item {
+          .containGaming {
+            .navbar {
+              .container-fluid {
+                .collapse {
+                  .navbar-nav {
+                    .nav-item {
+                      form {
+                        right: -16%;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .moreInfo {
+              .infoPrice {
+                top: 50%;
+                left: 48%;
+                position: relative;
+                transform: translate(-50%, 0%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #carousel {
+    #carouselGaming {
+      .carousel-inner {
+        .carousel-item {
+          .containGaming {
+            .navbar {
+              .container-fluid {
+                .navbar-brand {
+                  margin-left: 0px;
+                }
+                .collapse {
+                  .navbar-nav {
+                    .nav-item {
+                      form {
+                        right: -34%;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .moreInfo {
+              top: 54%;
+              left: 45%;
+              .infoPrice {
+                top: 50%;
+                left: 48%;
+                position: relative;
+                transform: translate(-53%, 0%);
+              }
+            }
+          }
+        }
+      }
+      .carousel-indicators {
+        margin-right: 170px
+      }
+    }
+    .containSearch {
+      .results {
+        font-size: 1.4em
+      }
+    }
+    #release {
+      .listBestMoments {
+        .list {
+          @include flex (column);
+          .col-lg-6 {
+            text-align: center;
+            .best {
+              width: 770px;
+            }
+            .next {
+              width: 640px;
+              margin-right: 180px;
+            }
+          }
+        }
+        .containMoments {
+          .showGames {
+            .games {
+              margin-right: 14%;
+              max-width: 750px;
+            }
+          }
+        }
+      }
+      footer {
+        padding-top: 86px;
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 970px) {
+  #carousel {
+    #carouselGaming {
+      .carousel-inner {
+        .carousel-item {
+          .containGaming {
+            .navbar {
+              width: 85%;
+              .container-fluid {
+                #btnBar {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #carousel {
+    #carouselGaming {
+      .carousel-inner {
+        .carousel-item {
+          .containGaming {
+            .navbar {
+              width: 93%;
+              .container-fluid {
+                .navbar-brand {
+                  margin-left: 5px;
+                }
+                #btnBar {
+                  margin-right: -50px;
+                }
+              }
+            }
+            .moreInfo {
+              left: 50%;
+              .img-fluid {
+                left: 2%;
+              }
+              .infoPrice {
+                top: 50%;
+                left: 39%;
+                position: relative;
+                transform: translate(-50%, -10%);
+              }
+            }
+          }
+        }
+      }
+      .carousel-indicators {
+        margin-right: 100px;
+        padding-bottom: 5px;
+      }
+    }
+    .containSearch {
+      .results {
+        font-size: 1.2em;
+      }
+    }
+    #release {
+      .listBestMoments {
+        .containMoments {
+          .showGames {
+            .games {
+              height: 345px;
+              overflow: auto;
+              max-width: 400px;
+              margin-right: 170px;
+              .col-lg-4 {
+                .img-fluid {
+                  height: 320px;
+                  margin: 10px 0px 10px 0px ;
+                }
+              }
+            }
+          }
+        }
+      }
+      footer {
+        padding-top: 106px;
+        padding-right: 0px;
+      }
+    }
+  }
+  #showSearch {
+    width: 270px;
+    .offcanvas-header {
+      #btnClose {
+        left: 132%;
+      }
+    }
+    .offcanvas-body {
+      .d-flex {
+        max-width: 90%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #carousel {
+    #carouselGaming {
+      .carousel-inner {
+        .carousel-item {
+          .containGaming {
+            .navbar {
+              .container-fluid {
+                .navbar-brand {
+                  font-size: 1.8em;
+                  margin-left: -5px;
+                }
+                #btnBar {
+                  margin-right: -35px;
+                }
+              }
+            }
+            .moreInfo {
+              top: 57%;
+              left: 48%;
+              .img-fluid {
+                height: 140px;
+              }
+              .infoPrice {
+                left: 31%;
+              }
+            }
+          }
+        }
+      }
+      .carousel-indicators {
+        margin-right: 70px;
+        padding-bottom: -5px;
+      }
+    }
+    .containSearch {
+      .results {
+        font-size: 1.4em;
+      }
+      .listResults {
+        .resultSearch {
+          height: 300px;
+          margin: 20px auto;
+          .col-lg-3 {
+            .row {
+              .col-lg-12 {
+                .img-fluid {
+                  height: 260px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #release {
+      .listBestMoments {
+        height: 350px;
+        .list {
+          .col-lg-6 {
+            .best {
+              width: 390px;
+            }
+            .next {
+              width: 360px;
+              margin-left: 10px;
+            }
+          }
+        }
+        .containMoments {
+          .showGames {
+            .games {
+              margin-right: -30px;
+              max-width: 600px;
+              .col-lg-4 {
+                .img-fluid {
+                  max-width: 340px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #carousel {
+    #carouselGaming {
+      .carousel-inner {
+        .carousel-item {
+          .containGaming {
+            .moreInfo {
+              top: 57%;
+              left: 48%;
+              .img-fluid {
+                height: 140px;
+                max-width: 300px;
+              }
+              .infoPrice {
+                left: 27%;
+              }
+            }
+          }
+        }
+      }
+      .carousel-indicators {
+        margin-right: 70px;
+        padding-bottom: -5px;
+      }
+    }
+    .containSearch {
+      .listResults {
+        .resultSearch {
+          .col-lg-3 {
+            .row {
+              .col-lg-12 {
+                .img-fluid {
+                  height: 255px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #release {
+      .listBestMoments {
+        height: 350px;
+        .list {
+          .col-lg-6 {
+            .best {
+              width: 350px;
+            }
+            .next {
+              width: 360px;
+              margin-left: -5px;
+            }
+          }
+        }
+        .containMoments {
+          .showGames {
+            .games {
+              margin: -20px auto;
+              margin-right: -10px;
+              max-width: 600px;
+              .col-lg-4 {
+                .img-fluid {
+                  height: 350px;
+                  max-width: 340px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #showSearch {
+    width: 230px;
+    .offcanvas-header {
+      #btnClose {
+        left: 147%;
+      }
+    }
+    .offcanvas-body {
+      .d-flex {
+        max-width: 95%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #carousel {
+    #carouselGaming {
+      .carousel-inner {
+        .carousel-item {
+          .containGaming {
+            .navbar {
+              width: 93%;
+              .container-fluid {
+                .navbar-brand {
+                  margin-left: 5px;
+                  margin-top: 5px;
+                  font-size: 1.4em;
+                }
+                #btnBar {
+                  margin-right: -20px;
+                }
+              }
+            }
+            .moreInfo {
+              top: 60%;
+              left: 48%;
+              .img-fluid {
+                height: 120px;
+                max-width: 280px;
+              }
+              .infoPrice {
+                left: 22%;
+              }
+            }
+          }
+        }
+      }
+      .carousel-indicators {
+        margin-right: 65px;
+        padding-bottom: -5px;
+      }
+    }
+    #release {
+      .listBestMoments {
+        height: 350px;
+        .list {
+          .col-lg-6 {
+            .best {
+              width: 290px;
+              font-size: 1.4em;
+            }
+            .next {
+              width: 290px;
+              font-size: 1.4em;
+              margin-left: 0px;
+            }
+          }
+        }
+        .containMoments {
+          .showGames {
+            .games {
+              height: 280px;
+              margin: -10px auto;
+              margin-right: 10px;
+              max-width: 600px;
+              .col-lg-4 {
+                .img-fluid {
+                  height: 270px;
+                  max-width: 340px;
+                }
+              }
+            }
+          }
+        }
+      }
+      footer {
+        padding-bottom: -15px;
+      }
+    }
+  }
+  #showSearch {
+    width: 363px;
+    border-radius: 0px;
+    .offcanvas-header {
+      #btnClose {
+        left: 152%;
+      }
+    }
+    .offcanvas-body {
+      .d-flex {
+        max-width: 100%;
+      }
+    }
+  }
+}
+

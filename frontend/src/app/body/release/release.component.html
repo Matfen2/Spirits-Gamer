@@ -1,0 +1,33 @@
+<section id="release" [style.background-image]="selectedBackground">
+  <div class="listBestMoments">
+    <div class="row list">
+      <div class="col-lg-6">
+        <p class="best" (click)="showMoments('sold')">Meilleures Ventes</p>
+      </div>
+      <div class="col-lg-6">
+        <p class="next" (click)="showMoments('release')">Prochaines sorties</p>
+      </div>
+    </div>
+    <div class="containMoments" [ngSwitch]="moments">
+      <div class="showGames" *ngSwitchCase="'sold'">
+        <div class="row games">
+          <div class="col-lg-4" *ngFor="let sold of solds" (mouseenter)="changeBackground(sold.background)"
+            (mouseleave)="resetBackground()">
+            <img [src]="sold.pict" class="img-fluid w-100" alt="bestSold" appCard />
+          </div>
+        </div>
+      </div>
+      <div class="showGames" *ngSwitchCase="'release'">
+        <div class="row games">
+          <div class="col-lg-4" *ngFor="let release of releases" (mouseenter)="changeBackground(release.background)"
+            (mouseleave)="resetBackground()">
+            <img [src]="release.pict" class="img-fluid w-100" alt="nextRelease" appCard />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class=" text-center">
+    <p class="copy">© Spirit's Gamer, 2024</p>
+  </footer>
+</section>
