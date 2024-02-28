@@ -33,24 +33,6 @@ body {
   font-family: ClassicRobot;
   text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0, 0, 0, 0.02);
 }
-#carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid #btnBar {
-  display: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.4em;
-  color: azure;
-  background: transparent;
-  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0, 0, 0, 0.15);
-}
-#carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .collapse .navbar-nav .nav-item form {
-  top: 2%;
-  right: -34%;
-  position: relative;
-  transform: translate(10%, 0%);
-  max-width: 60%;
-  margin-top: 7px;
-  font-family: Striker;
-}
 #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo {
   top: 50%;
   left: 20%;
@@ -113,52 +95,99 @@ body {
   transform: scale(1.2);
 }
 #carousel .containSearch {
+  height: 100px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("/assets/pict/search.jpeg");
 }
-#carousel .containSearch .results {
+#carousel .containSearch .d-flex {
+  top: 50%;
+  left: 50%;
+  max-width: 40%;
+  padding-top: 7px;
+  position: relative;
+  font-family: Striker;
+  transform: translate(-50%, -50%);
+}
+#carousel .containSearch .showSearch .alert {
+  width: 40%;
+  margin: auto;
+  display: block;
+}
+#carousel .containSearch .showSearch .results {
+  margin-top: 10px;
   color: azure;
   text-align: center;
   padding-top: 7px;
   font-family: Striker;
   text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
 }
-#carousel .containSearch .listResults .resultSearch {
-  height: 400px;
-  overflow: auto;
+#carousel .containSearch .showSearch .listResults .resultSearch {
+  height: 420px;
   margin: -20px auto;
 }
-#carousel .containSearch .listResults .resultSearch .col-lg-3 {
+#carousel .containSearch .showSearch .listResults .resultSearch .col-lg-3 {
   margin: auto;
   display: block;
 }
-#carousel .containSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .img-fluid {
+#carousel .containSearch .showSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .img-fluid {
   display: block;
-  height: 300px;
-  margin: auto;
+  height: 330px;
+  margin: 20px auto;
   max-width: 350px;
   border-radius: 10px;
 }
-#carousel .containSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .d-flex {
-  text-align: center;
+#carousel .containSearch .showSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .info {
   justify-content: center;
-  -moz-column-gap: 60px;
-       column-gap: 60px;
-  overflow: auto;
-  max-width: 800px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  display: flex;
+  flex-direction: row;
+  margin: -12px auto;
 }
-#carousel .containSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .d-flex .title {
-  font-size: 1.4em;
-  color: azure;
-  text-shadow: 2px 2px 2px #000000, 4px 4px 0px rgba(255, 255, 255, 0.15);
-}
-#carousel .containSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .d-flex .price {
-  margin-left: 5px;
+#carousel .containSearch .showSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .info .promo {
+  height: 35px;
+  padding: 0px 5px 2px 5px;
   font-size: 1.3em;
   color: azure;
-  text-shadow: 0px 2px 0px #000000, 2px 4px 0px rgb(0, 0, 0);
+  border-radius: 10px;
+  font-family: Emizen;
+  background-color: rgb(158, 65, 7);
+  border: 1px solid azure;
+  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
+}
+#carousel .containSearch .showSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .info .priceReduce {
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  width: 108px;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+  border-radius: 10px;
+  padding: 10px 5px -10px 3px;
+  background-color: darkgreen;
+  border: 1px solid azure;
+}
+#carousel .containSearch .showSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .info .priceReduce .price {
+  margin-left: 8px;
+  font-size: 1.3em;
+  color: azure;
+  font-family: Emizen;
+  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0, 0, 0, 0.15);
+}
+#carousel .containSearch .showSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .info .priceReduce #btnCart {
+  width: 30px;
+  height: 30px;
+  border: none;
+  font-size: 1.2em;
+  color: azure;
+  background: transparent;
+  transition: all 0.25ms ease;
+  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0, 0, 0, 0.15);
+}
+#carousel .containSearch .showSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .info .priceReduce #btnCart:hover {
+  transform: scale(1.2);
 }
 #carousel #release {
   background-color: rgb(50, 50, 50);
@@ -221,32 +250,9 @@ body {
   text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
 }
 
-#showSearch {
-  height: 120px;
-  width: 400px;
-  border-radius: 0px 0px 0px 10px;
-  background-color: black;
-  border: 1px solid azure;
-}
-#showSearch .offcanvas-header {
-  width: 65%;
-  height: 20px;
-}
-#showSearch .offcanvas-header #btnClose {
-  position: relative;
-  left: 90%;
-  border: none;
-  font-size: 1.4em;
-  color: azure;
-  background-color: transparent;
-}
-#showSearch .offcanvas-body .d-flex {
-  max-width: 60%;
-}
-
 @media screen and (max-width: 1440px) {
-  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .collapse .navbar-nav .nav-item form {
-    right: -16%;
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .navbar-brand {
+    margin-left: 65px;
   }
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .infoPrice {
     top: 50%;
@@ -254,13 +260,13 @@ body {
     position: relative;
     transform: translate(-50%, 0%);
   }
+  #carousel .containSearch .showSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .img-fluid {
+    max-width: 300px;
+  }
 }
 @media screen and (max-width: 1024px) {
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .navbar-brand {
     margin-left: 0px;
-  }
-  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .collapse .navbar-nav .nav-item form {
-    right: -34%;
   }
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo {
     top: 54%;
@@ -275,8 +281,11 @@ body {
   #carousel #carouselGaming .carousel-indicators {
     margin-right: 170px;
   }
-  #carousel .containSearch .results {
+  #carousel .containSearch .showSearch .results {
     font-size: 1.4em;
+  }
+  #carousel .containSearch .showSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .info {
+    max-width: 330px;
   }
   #carousel #release .listBestMoments .list {
     display: flex;
@@ -305,16 +314,10 @@ body {
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar {
     width: 85%;
   }
-  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid #btnBar {
-    display: block;
-  }
 }
 @media screen and (max-width: 768px) {
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar {
     width: 93%;
-  }
-  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .navbar-brand {
-    margin-left: 5px;
   }
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid #btnBar {
     margin-right: -50px;
@@ -335,8 +338,16 @@ body {
     margin-right: 100px;
     padding-bottom: 5px;
   }
-  #carousel .containSearch .results {
-    font-size: 1.2em;
+  #carousel .containSearch .showSearch .results {
+    font-size: 1.3em;
+  }
+  #carousel .containSearch .showSearch .listResults .resultSearch {
+    height: 430px;
+    overflow: auto;
+    margin: -10px auto;
+  }
+  #carousel .containSearch .showSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .img-fluid {
+    height: 350px;
   }
   #carousel #release .listBestMoments .containMoments .showGames .games {
     height: 345px;
@@ -352,47 +363,47 @@ body {
     padding-top: 106px;
     padding-right: 0px;
   }
-  #showSearch {
-    width: 270px;
-  }
-  #showSearch .offcanvas-header #btnClose {
-    left: 132%;
-  }
-  #showSearch .offcanvas-body .d-flex {
-    max-width: 90%;
-  }
 }
 @media screen and (max-width: 425px) {
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .navbar-brand {
-    font-size: 1.8em;
-    margin-left: -5px;
+    font-size: 2.4em;
+    display: block;
+    margin-right: -15px;
+    margin: auto;
+    padding-left: 15px;
   }
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid #btnBar {
     margin-right: -35px;
   }
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo {
-    top: 57%;
+    top: 56%;
     left: 48%;
   }
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .img-fluid {
     height: 140px;
   }
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .infoPrice {
-    left: 31%;
+    left: 29%;
   }
   #carousel #carouselGaming .carousel-indicators {
     margin-right: 70px;
     padding-bottom: -5px;
   }
+  #carousel .containSearch .d-flex {
+    max-width: 70%;
+  }
   #carousel .containSearch .results {
     font-size: 1.4em;
   }
-  #carousel .containSearch .listResults .resultSearch {
-    height: 300px;
-    margin: 20px auto;
+  #carousel .containSearch .showSearch .alert {
+    width: 70%;
   }
-  #carousel .containSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .img-fluid {
-    height: 260px;
+  #carousel .containSearch .showSearch .listResults .resultSearch {
+    height: 400px;
+    margin: -10px auto;
+  }
+  #carousel .containSearch .showSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .img-fluid {
+    height: 320px;
   }
   #carousel #release .listBestMoments {
     height: 350px;
@@ -414,7 +425,7 @@ body {
 }
 @media screen and (max-width: 375px) {
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo {
-    top: 57%;
+    top: 55%;
     left: 48%;
   }
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .img-fluid {
@@ -428,8 +439,11 @@ body {
     margin-right: 70px;
     padding-bottom: -5px;
   }
-  #carousel .containSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .img-fluid {
-    height: 255px;
+  #carousel .containSearch .showSearch .listResults .resultSearch {
+    height: 370px;
+  }
+  #carousel .containSearch .showSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .img-fluid {
+    height: 302px;
   }
   #carousel #release .listBestMoments {
     height: 350px;
@@ -442,13 +456,16 @@ body {
     margin-left: -5px;
   }
   #carousel #release .listBestMoments .containMoments .showGames .games {
-    margin: -20px auto;
-    margin-right: -10px;
+    height: 345px;
+    margin: -10px auto;
+    margin-right: 0px;
     max-width: 600px;
   }
   #carousel #release .listBestMoments .containMoments .showGames .games .col-lg-4 .img-fluid {
-    height: 350px;
-    max-width: 340px;
+    margin: 15px auto;
+    display: block;
+    height: 320px;
+    max-width: 240px;
   }
   #showSearch {
     width: 230px;
@@ -467,13 +484,12 @@ body {
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .navbar-brand {
     margin-left: 5px;
     margin-top: 5px;
-    font-size: 1.4em;
-  }
-  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid #btnBar {
-    margin-right: -20px;
+    font-size: 2.1em;
+    display: block;
+    margin: auto;
   }
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo {
-    top: 60%;
+    top: 58%;
     left: 48%;
   }
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .img-fluid {
@@ -482,10 +498,20 @@ body {
   }
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .infoPrice {
     left: 22%;
+    margin-top: 5px;
   }
   #carousel #carouselGaming .carousel-indicators {
     margin-right: 65px;
     padding-bottom: -5px;
+  }
+  #carousel .containSearch .d-flex {
+    max-width: 80%;
+  }
+  #carousel .containSearch .showSearch .alert {
+    width: 80%;
+  }
+  #carousel .containSearch .showSearch .listResults .resultSearch {
+    height: 380px;
   }
   #carousel #release .listBestMoments {
     height: 350px;
@@ -500,17 +526,19 @@ body {
     margin-left: 0px;
   }
   #carousel #release .listBestMoments .containMoments .showGames .games {
-    height: 280px;
+    height: 290px;
     margin: -10px auto;
     margin-right: 10px;
     max-width: 600px;
   }
   #carousel #release .listBestMoments .containMoments .showGames .games .col-lg-4 .img-fluid {
     height: 270px;
-    max-width: 340px;
+    max-width: 270px;
   }
   #carousel #release footer {
-    padding-bottom: -15px;
+    margin: 10px auto;
+    font-size: 0.9em;
+    padding-bottom: 5px;
   }
   #showSearch {
     width: 363px;

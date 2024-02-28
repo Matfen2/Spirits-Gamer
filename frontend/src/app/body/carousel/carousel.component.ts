@@ -12,19 +12,55 @@ import { trigger, state, style, transition ,animate} from '@angular/animations'
       state(
         'open',
         style({
-          height: "400px",
+          height: "650px",
           display: "block",
+          paddingTop: "20px"
         })
       ),
       state(
         'closed',
         style({
-          heigth: "0px",
           display: "none",
         })
       ),
       transition('open => closed', [animate('0.2s')]),
       transition('closed => open', [animate('0.4s')]),
+    ]),
+    trigger('heightMax', [
+      state(
+        'max',
+        style({
+          height: "550px",
+          display: "block",
+        })
+      ),
+      state(
+        'min',
+        style({
+          height: "100px",
+        })
+      ),
+      transition('max => min', [animate('0.2s')]),
+      transition('min => max', [animate('0.4s')]),
+    ]),
+    trigger('formPosition', [
+      state(
+        'up',
+        style({
+          top: "10%",
+          paddingTop: "10px",
+          paddingBottom: "10px",
+          position: "relative"
+        })
+      ),
+      state(
+        'down',
+        style({
+
+        })
+      ),
+      transition('up => down', [animate('0.2s')]),
+      transition('down => up', [animate('0.4s')]),
     ]),
   ]
 })
@@ -83,6 +119,10 @@ export class CarouselComponent implements OnInit {
           this.searchedTitle = title ?? '';
           this.loading = false;
           this.errorMessage = '';
+          if (this.results && this.results.length === 0) {
+          this.errorMessage = "Aucun résultat trouvé.";
+        }
+        console.log(res)
         },
         (error) => {
           console.error(error);
