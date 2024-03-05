@@ -46,13 +46,18 @@ $thirdFont: ClassicRobot;
           background-position: center;
           background-repeat: no-repeat;
           .navbar {
-            .container-fluid {
-              .navbar-brand {
-                color: $firstColor;
-                font-size: 2.4em;
-                letter-spacing: 2px;
-                font-family: $thirdFont;
-                text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0,0,0,0.02);
+            #btnBar {
+              position: relative;
+              left: 98%;
+              top: 0%;
+              border: none;
+              font-size: 1.7em;
+              color: $firstColor;
+              background: transparent;
+              transition: all 0.25ms ease;
+              text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0,0,0,0.02);
+              &:hover {
+                transform: rotate(90deg);
               }
             }
           }
@@ -228,14 +233,12 @@ $thirdFont: ClassicRobot;
       .list {
         width: 100%;
         margin: auto;
+        column-gap: 120px;
+        justify-content: center;
         padding-top: 10px;
-        max-width: 800px;
-        .col-lg-6 {
-          .best {
-            width: 800px;
+        .best, .next {
             cursor: pointer;
             font-size: 1.5em;
-            margin-right: 60px;
             color: $firstColor;
             font-family: $firstFont;
             text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
@@ -243,20 +246,6 @@ $thirdFont: ClassicRobot;
               color: $secondColor;
               text-shadow: 2px 2px 0px #ffffff, 5px 4px 0px rgba(255, 255, 255, 0.15);
             }
-          }
-          .next {
-            width: 800px;
-            cursor: pointer;
-            font-size: 1.5em;
-            margin-left: 60px;
-            color: $firstColor;
-            font-family: $firstFont;
-            text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
-            &:hover {
-              color: $secondColor;
-              text-shadow: 2px 2px 0px #ffffff, 5px 4px 0px rgba(255, 255, 255, 0.15);
-            }
-          }
         }
       }
       .containMoments {
@@ -286,6 +275,236 @@ $thirdFont: ClassicRobot;
       }
     }
   }
+  #showCanvas {
+    height: 230px;
+    max-width: 340px;
+    background-color: $secondColor;
+    border-radius: 0px 0px 0px 10px;
+    border: 2px solid $firstColor;
+    #btnCloseCanvas {
+      top: 0%;
+      right: 0%;
+      font-size: 1.9em;
+      position: absolute;
+      color: $firstColor;
+      border: transparent;
+      background: transparent;
+      transition: all 0.25ms ease;
+      text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0,0,0,0.02);
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    .offcanvas-header {
+      .offcanvas-title {
+        top: 75%;
+        left: 50%;
+        position: relative;
+        font-size: 2.0em;
+        color: $firstColor;
+        font-family: $thirdFont;
+        transform: translate(-50%, -50%);
+        text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0,0,0,0.02);
+      }
+    }
+    .offcanvas-body {
+      .containNav {
+        line-height: 40px;
+        margin-top: -20px;
+        text-align: center;
+        list-style-type: none;
+        .nav-item {
+          color: $firstColor;
+          font-family: $firstFont;
+          .nav-link {
+            color: $firstColor;
+            letter-spacing: 1px;
+            font-size: 1.0em;
+            cursor: pointer;
+            transition: all 0.25ms ease;
+            text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0,0,0,0.02);
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+          .dropdown-menu {
+            border-radius: 5px;
+            background: $firstColor;
+            border: 1px solid $firstColor;
+            .dropdown-item {
+              font-size: 1.0em;
+              color: $firstColor;
+              text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0,0,0,0.02);
+              &:hover {
+                transform: scale(1.1);
+                background: transparent;
+              }
+            }
+          }
+        }
+      }
+      #btnConnect {
+        margin: 5px auto;
+        display: block;
+        letter-spacing: 1px;
+        font-size: 1.0em;
+        border-radius: 5px;
+        color: $firstColor;
+        font-family: $firstFont;
+        background: transparent;
+        border: 2px solid $firstColor;
+        text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0,0,0,0.02);
+        &:hover {
+          transform: scale(1.1);
+          -webkit-box-shadow: 1px 1px 8px 6px #ffffff;
+          box-shadow: 1px 1px 8px 6px #ffffff;
+        }
+      }
+    }
+  }
+  #showConnect {
+    #btnCloseConnect {
+      font-size: 1.9em;
+      color: $firstColor;
+      border: transparent;
+      background: transparent;
+      transition: all 0.25ms ease;
+      text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0,0,0,0.02);
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    .modal-dialog {
+      .modal-content {
+        background-image: url('/assets/pict/SteamBackground.png');
+        .modal-body {
+          .modal-title {
+            font-size: 1.6em;
+            color: $firstColor;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: $firstFont;
+            text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0,0,0,0.02);
+          }
+          form {
+            #formConnect {
+              margin-top: -10px;
+              column-gap: 10px;
+              .inputFirst, .inputSecond {
+                @include flex (column);
+                input {
+                  font-family: $secondFont;
+                }
+                .alert {
+                  height: 40px;
+                  p {
+                    margin-top: -10px;
+                  }
+                }
+              }
+            }
+            #listBtnConnect {
+              margin-top: 10px;
+            }
+          }
+          #alertSuccess, #alertError {
+            height: 40px;
+            p {
+              margin-top: -10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #showSignUp {
+    #btnCloseSignUp{
+      font-size: 1.9em;
+      color: $firstColor;
+      border: transparent;
+      background: transparent;
+      transition: all 0.25ms ease;
+      text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0,0,0,0.02);
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    .modal-dialog {
+      margin: -10px auto;
+      .modal-content {
+        background-image: url('/assets/pict/SteamBackground.png');
+        .modal-body {
+          margin-top: 0px;
+          .modal-title {
+            font-size: 1.6em;
+            color: $firstColor;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: $firstFont;
+            text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0,0,0,0.02);
+          }
+          form {
+            #formSignUp {
+              margin-top: -10px;
+              column-gap: 10px;
+              display: block;
+              @include flex (column);
+              .listInputFirst {
+                column-gap: 10px;
+                justify-content: center;
+                @include flex (row);
+                .inputFirst, .inputSecond {
+                  @include flex (column);
+                  input {
+                    font-family: $secondFont;
+                  }
+                  .alert {
+                    height: 40px;
+                    p {
+                      margin-top: -10px;
+                    }
+                  }
+                }
+              }
+              .listInputSecond {
+                column-gap: 10px;
+                margin-top: 10px;
+                justify-content: center;
+                @include flex (row);
+                .inputThird, .inputFour {
+                  @include flex (column);
+                  input {
+                    font-family: $secondFont;
+                  }
+                  #phoneAlert {
+                    height: 60px;
+                    p {
+                      margin-top: -10px;
+                    }
+                  }
+                  #passAlert {
+                    height: 40px;
+                    p {
+                      margin-top: -10px;
+                    }
+                  }
+                }
+              }
+            }
+            #listBtnSignUp {
+              margin-top: 10px;
+            }
+          }
+          #alertSuccess, #alertError {
+            height: 40px;
+            p {
+              margin-top: -10px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // MEDIA QUERRY
@@ -296,10 +515,8 @@ $thirdFont: ClassicRobot;
         .carousel-item {
           .containGaming {
             .navbar {
-              .container-fluid {
-                .navbar-brand {
-                  margin-left: 65px;
-                }
+              #btnBar {
+                left: 97%;
               }
             }
             .moreInfo {
@@ -341,10 +558,8 @@ $thirdFont: ClassicRobot;
         .carousel-item {
           .containGaming {
             .navbar {
-              .container-fluid {
-                .navbar-brand {
-                  margin-left: 0px;
-                }
+              #btnBar {
+                left: 96%;
               }
             }
             .moreInfo {
@@ -386,19 +601,6 @@ $thirdFont: ClassicRobot;
     }
     #release {
       .listBestMoments {
-        .list {
-          @include flex (column);
-          .col-lg-6 {
-            text-align: center;
-            .best {
-              width: 770px;
-            }
-            .next {
-              width: 640px;
-              margin-right: 180px;
-            }
-          }
-        }
         .containMoments {
           .showGames {
             .games {
@@ -416,34 +618,15 @@ $thirdFont: ClassicRobot;
   }
 }
 
-@media screen and (max-width: 970px) {
-  #carousel {
-    #carouselGaming {
-      .carousel-inner {
-        .carousel-item {
-          .containGaming {
-            .navbar {
-              width: 85%;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 768px) {
   #carousel {
     #carouselGaming {
       .carousel-inner {
         .carousel-item {
           .containGaming {
-            .navbar {
-              width: 93%;
-              .container-fluid {
-                #btnBar {
-                  margin-right: -50px;
-                }
+           .navbar {
+              #btnBar {
+                left: 95%;
               }
             }
             .moreInfo {
@@ -491,16 +674,23 @@ $thirdFont: ClassicRobot;
     }
     #release {
       .listBestMoments {
+        .list {
+          column-gap: 70px;
+          text-align: center;
+          .best, .next {
+            font-size: 1.3em;
+          }
+        }
         .containMoments {
           .showGames {
             .games {
-              height: 345px;
+              height: 375px;
               overflow: auto;
               max-width: 400px;
               margin-right: 170px;
               .col-lg-4 {
                 .img-fluid {
-                  height: 320px;
+                  height: 370px;
                   margin: 10px 0px 10px 0px ;
                 }
               }
@@ -523,17 +713,8 @@ $thirdFont: ClassicRobot;
         .carousel-item {
           .containGaming {
             .navbar {
-              .container-fluid {
-                .navbar-brand {
-                  font-size: 2.4em;
-                  display: block;
-                  margin-right: -15px;
-                  margin: auto;
-                  padding-left: 15px;
-                }
-                #btnBar {
-                  margin-right: -35px;
-                }
+              #btnBar {
+                left: 91%;
               }
             }
             .moreInfo {
@@ -584,28 +765,93 @@ $thirdFont: ClassicRobot;
     }
     #release {
       .listBestMoments {
-        height: 350px;
         .list {
-          .col-lg-6 {
-            .best {
-              width: 390px;
-            }
-            .next {
-              width: 360px;
-              margin-left: 10px;
-            }
-          }
+          column-gap: 20px;
         }
         .containMoments {
           .showGames {
             .games {
-              margin-right: -30px;
-              max-width: 600px;
+              height: 360px;
+              margin-right: 140px;
               .col-lg-4 {
                 .img-fluid {
-                  max-width: 340px;
+                  height: 350px;
+                  margin: 10px auto;
+                  display: block;
+                  padding-left: 10px;
+                  max-width: 310px;
                 }
               }
+            }
+          }
+        }
+      }
+      footer {
+        margin-top: 10px;
+      }
+    }
+  }
+  #showConnect {
+    .modal-dialog {
+      .modal-content {
+        .modal-body {
+          form {
+            #formConnect {
+              .inputFirst, .inputSecond {
+                .alert {
+                  p {
+                    font-size: 0.8em;
+                    text-align: center;
+                  }
+                }
+              }
+            }
+          }
+          .alert-danger, .alert-success  {
+            p {
+              font-size: 0.8em;
+              text-align: center;
+              margin-top: -12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #showSignUp {
+    .modal-dialog {
+      .modal-content {
+        .modal-body {
+          form {
+            #formSignUp {
+              .listInputFirst {
+                .inputFirst, .inputSecond {
+                  .alert {
+                    p {
+                      font-size: 0.8em;
+                      text-align: center;
+                      margin-top: -13px;
+                    }
+                  }
+                }
+              }
+              .listInputSecond {
+                .inputThird, .inputFour {
+                  .alert {
+                    p {
+                      font-size: 0.8em;
+                      text-align: center;
+                      margin-top: -13px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .alert-danger, .alert-success  {
+            p {
+              text-align: center;
+              margin-top: -12px;
             }
           }
         }
@@ -620,6 +866,11 @@ $thirdFont: ClassicRobot;
       .carousel-inner {
         .carousel-item {
           .containGaming {
+            .navbar {
+              #btnBar {
+                left: 89%;
+              }
+            }
             .moreInfo {
               top: 55%;
               left: 48%;
@@ -661,20 +912,15 @@ $thirdFont: ClassicRobot;
       .listBestMoments {
         height: 350px;
         .list {
-          .col-lg-6 {
-            .best {
-              width: 350px;
-            }
-            .next {
-              width: 360px;
-              margin-left: -5px;
-            }
+          column-gap: 20px;
+          .best, .next {
+            font-size: 1.1em;
           }
         }
         .containMoments {
           .showGames {
             .games {
-              height: 345px;
+              height: 375px;
               margin: -10px auto;
               margin-right: 0px;
               max-width: 600px;
@@ -682,7 +928,7 @@ $thirdFont: ClassicRobot;
                 .img-fluid {
                   margin: 15px auto;
                   display: block;
-                  height: 320px;
+                  height: 360px;
                   max-width: 240px;
                 }
               }
@@ -702,6 +948,74 @@ $thirdFont: ClassicRobot;
     .offcanvas-body {
       .d-flex {
         max-width: 95%;
+      }
+    }
+  }
+  #showConnect {
+    .modal-dialog {
+      .modal-content {
+        .modal-body {
+          form {
+            #formConnect {
+              .inputFirst, .inputSecond {
+                .alert {
+                  p {
+                    font-size: 0.7em;
+                    text-align: center;
+                    margin-top: -15px;
+                  }
+                }
+              }
+            }
+          }
+          .alert-danger, .alert-success  {
+            p {
+              font-size: 0.7em;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  #showSignUp {
+    .modal-dialog {
+      .modal-content {
+        .modal-body {
+          form {
+            #formSignUp {
+              .listInputFirst {
+                .inputFirst, .inputSecond {
+                  .alert {
+                    p {
+                      font-size: 0.7em;
+                      text-align: center;
+                      margin-top: -13px;
+                    }
+                  }
+                }
+              }
+              .listInputSecond {
+                .inputThird, .inputFour {
+                  .alert {
+                    p {
+                      font-size: 0.7em;
+                      text-align: center;
+                      margin-top: -13px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .alert-danger, .alert-success  {
+            p {
+              font-size: 0.7em;
+              text-align: center;
+              margin-top: -12px;
+            }
+          }
+        }
       }
     }
   }
@@ -779,13 +1093,13 @@ $thirdFont: ClassicRobot;
         .containMoments {
           .showGames {
             .games {
-              height: 290px;
+              height: 390px;
               margin: -10px auto;
               margin-right: 10px;
               max-width: 600px;
               .col-lg-4 {
                 .img-fluid {
-                  height: 270px;
+                  height: 370px;
                   max-width: 270px;
                 }
               }

@@ -10,10 +10,12 @@ import { NavComponent } from './nav/nav.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ReleaseComponent } from './release/release.component';
 import { CardResultsDirective } from './card-results.directive';
+import { ConnectComponent } from './connect/connect.component';
 
 const routes: Routes = [
   { path: 'main', component: MainComponent },
   { path: 'nav', component: NavComponent },
+  { path: 'connect', component: ConnectComponent },
   { path: 'carousel', component: CarouselComponent },
   { path: 'release', component: ReleaseComponent },
   { path: '', redirectTo: '/main', pathMatch: 'full' }
@@ -27,6 +29,7 @@ const routes: Routes = [
     ReleaseComponent,
     CarouselComponent,
     CardResultsDirective,
+    ConnectComponent,
   ],
   imports: [
     FormsModule,

@@ -1,0 +1,112 @@
+<div class="modal fade" id="showConnect" aria-hidden="true" aria-labelledby="showConnectLabel" tabindex="-1">
+  <button type="button" id="btnCloseConnect" data-bs-dismiss="modal" aria-label="Close"><i
+      class="fas fa-times"></i></button>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h1 class="modal-title fs-5" id="showConnectLabel">SE CONNECTER</h1>
+        <form [formGroup]="connectForm" (ngSubmit)="connect()">
+          <div class="d-flex" id="formConnect">
+            <div class="inputFirst">
+              <input type="email" name="adress" id="adress" class="form-control" formControlName="adress"
+                placeholder="Adresse email">
+              <div class="alert alert-danger" style="margin: 10px auto;"
+                *ngIf="connectForm.get('adress')?.hasError('required') && connectForm.get('adress')?.touched">
+                <p>Adresse email est requise</p>
+              </div>
+            </div>
+            <div class="inputSecond">
+              <input type="password" name="pass" id="pass" class="form-control" formControlName="pass"
+                placeholder="Mot de Passe">
+              <div class="alert alert-danger" style="margin: 10px auto;"
+                *ngIf="connectForm.get('pass')?.hasError('required') && connectForm.get('pass')?.touched">
+                <p>Mot de passe est requis</p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center gap-3" id="listBtnConnect">
+            <button type="submit" id="btnConnect" class="btn btn-primary">SE CONNECTER</button>
+            <button type="button" id="btnSignUp" class="btn btn-secondary" data-bs-toggle="modal"
+              data-bs-target="#showSignUp">INCRIVEZ-VOUS</button>
+          </div>
+        </form>
+
+        <div class="alert alert-success" id="alertSuccess" style="margin: 10px auto; width: 50%; display: block"
+          *ngIf="successConnect">
+          <p>Connection réussie</p>
+        </div>
+
+        <div class="alert alert-danger" id="alertError" style="margin: 10px auto; width: 50%; display: block"
+          *ngIf="errorConnect">
+          <p>Echec de la connection</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="showSignUp" aria-hidden="true" aria-labelledby="showSignUpLabel" tabindex="-1">
+  <button type="button" id="btnCloseSignUp" data-bs-dismiss="modal" aria-label="Close"><i
+      class="fas fa-times"></i></button>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h1 class="modal-title fs-5" id="showSignUpLabel">INSCRIPTION</h1>
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
+          <div class="d-flex" id="formSignUp">
+            <div class="listInputFirst">
+              <div class="inputFirst">
+                <input type="text" name="pseudo" id="pseudo" class="form-control" formControlName="pseudo"
+                  placeholder="Nom d'utilisateur">
+                <div class="alert alert-danger" style="margin-top: 10px"
+                  *ngIf="registerForm.get('pseudo')?.hasError('required') && registerForm.get('pseudo')?.touched">
+                  <p>Nom d'utilisateur est requis</p>
+                </div>
+              </div>
+              <div class="inputSecond">
+                <input type="email" name="adress" id="adress" class="form-control" formControlName="adress"
+                  placeholder="Adresse email">
+                <div class="alert alert-danger" style="margin-top: 10px"
+                  *ngIf="registerForm.get('adress')?.hasError('required') && registerForm.get('adress')?.touched">
+                  <p>Adresse email est requise</p>
+                </div>
+              </div>
+            </div>
+            <div class="listInputSecond">
+              <div class="inputThird">
+                <input type="text" name="phone" id="phone" class="form-control" formControlName="phone"
+                  placeholder="Numéro de téléphone">
+                <div class="alert alert-danger" id="phoneAlert" style="margin-top: 10px"
+                  *ngIf="registerForm.get('phone')?.hasError('required') && registerForm.get('phone')?.touched">
+                  <p>Numéro de téléphone est requis</p>
+                </div>
+              </div>
+              <div class="inputFour">
+                <input type="password" name="pass" id="pass" class="form-control" formControlName="pass"
+                  placeholder="Mot de Passe">
+                <div class="alert alert-danger" id="passAlert" style="margin-top: 10px"
+                  *ngIf="registerForm.get('pass')?.hasError('required') && registerForm.get('pass')?.touched">
+                  <p>Mot de passe est requis</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center gap-3" id="listBtnSignUp">
+            <button type="submit" id="btnSignUp" class="btn btn-primary">S'INSCRIRE</button>
+            <button type="button" id="btnConnect" class="btn btn-secondary" data-bs-toggle="modal"
+              data-bs-target="#showConnect">CONNECTEZ-VOUS</button>
+          </div>
+        </form>
+
+        <div class="alert alert-success" id="alertSuccess" style="margin: 10px auto; width: 50%; display: block"
+          *ngIf="successRegister">
+          <p>Inscription réussie</p>
+        </div>
+
+        <div class="alert alert-danger" id="alertError" style="margin: 10px auto; width: 50%; display: block"
+          *ngIf="errorRegister">
+          <p>Echec de l'inscription</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

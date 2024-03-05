@@ -26,12 +26,19 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
-#carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .navbar-brand {
+#carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar #btnBar {
+  position: relative;
+  left: 98%;
+  top: 0%;
+  border: none;
+  font-size: 1.7em;
   color: azure;
-  font-size: 2.4em;
-  letter-spacing: 2px;
-  font-family: ClassicRobot;
+  background: transparent;
+  transition: all 0.25ms ease;
   text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0, 0, 0, 0.02);
+}
+#carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar #btnBar:hover {
+  transform: rotate(90deg);
 }
 #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo {
   top: 50%;
@@ -201,32 +208,19 @@ body {
 #carousel #release .listBestMoments .list {
   width: 100%;
   margin: auto;
+  -moz-column-gap: 120px;
+       column-gap: 120px;
+  justify-content: center;
   padding-top: 10px;
-  max-width: 800px;
 }
-#carousel #release .listBestMoments .list .col-lg-6 .best {
-  width: 800px;
+#carousel #release .listBestMoments .list .best, #carousel #release .listBestMoments .list .next {
   cursor: pointer;
   font-size: 1.5em;
-  margin-right: 60px;
   color: azure;
   font-family: Striker;
   text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
 }
-#carousel #release .listBestMoments .list .col-lg-6 .best:hover {
-  color: black;
-  text-shadow: 2px 2px 0px #ffffff, 5px 4px 0px rgba(255, 255, 255, 0.15);
-}
-#carousel #release .listBestMoments .list .col-lg-6 .next {
-  width: 800px;
-  cursor: pointer;
-  font-size: 1.5em;
-  margin-left: 60px;
-  color: azure;
-  font-family: Striker;
-  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
-}
-#carousel #release .listBestMoments .list .col-lg-6 .next:hover {
+#carousel #release .listBestMoments .list .best:hover, #carousel #release .listBestMoments .list .next:hover {
   color: black;
   text-shadow: 2px 2px 0px #ffffff, 5px 4px 0px rgba(255, 255, 255, 0.15);
 }
@@ -249,10 +243,233 @@ body {
   font-family: Emizen;
   text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
 }
+#carousel #showCanvas {
+  height: 230px;
+  max-width: 340px;
+  background-color: black;
+  border-radius: 0px 0px 0px 10px;
+  border: 2px solid azure;
+}
+#carousel #showCanvas #btnCloseCanvas {
+  top: 0%;
+  right: 0%;
+  font-size: 1.9em;
+  position: absolute;
+  color: azure;
+  border: transparent;
+  background: transparent;
+  transition: all 0.25ms ease;
+  text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0, 0, 0, 0.02);
+}
+#carousel #showCanvas #btnCloseCanvas:hover {
+  transform: scale(1.2);
+}
+#carousel #showCanvas .offcanvas-header .offcanvas-title {
+  top: 75%;
+  left: 50%;
+  position: relative;
+  font-size: 2em;
+  color: azure;
+  font-family: ClassicRobot;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0, 0, 0, 0.02);
+}
+#carousel #showCanvas .offcanvas-body .containNav {
+  line-height: 40px;
+  margin-top: -20px;
+  text-align: center;
+  list-style-type: none;
+}
+#carousel #showCanvas .offcanvas-body .containNav .nav-item {
+  color: azure;
+  font-family: Striker;
+}
+#carousel #showCanvas .offcanvas-body .containNav .nav-item .nav-link {
+  color: azure;
+  letter-spacing: 1px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.25ms ease;
+  text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0, 0, 0, 0.02);
+}
+#carousel #showCanvas .offcanvas-body .containNav .nav-item .nav-link:hover {
+  transform: scale(1.1);
+}
+#carousel #showCanvas .offcanvas-body .containNav .nav-item .dropdown-menu {
+  border-radius: 5px;
+  background: azure;
+  border: 1px solid azure;
+}
+#carousel #showCanvas .offcanvas-body .containNav .nav-item .dropdown-menu .dropdown-item {
+  font-size: 1em;
+  color: azure;
+  text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0, 0, 0, 0.02);
+}
+#carousel #showCanvas .offcanvas-body .containNav .nav-item .dropdown-menu .dropdown-item:hover {
+  transform: scale(1.1);
+  background: transparent;
+}
+#carousel #showCanvas .offcanvas-body #btnConnect {
+  margin: 5px auto;
+  display: block;
+  letter-spacing: 1px;
+  font-size: 1em;
+  border-radius: 5px;
+  color: azure;
+  font-family: Striker;
+  background: transparent;
+  border: 2px solid azure;
+  text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0, 0, 0, 0.02);
+}
+#carousel #showCanvas .offcanvas-body #btnConnect:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 1px 8px 6px #ffffff;
+}
+#carousel #showConnect #btnCloseConnect {
+  font-size: 1.9em;
+  color: azure;
+  border: transparent;
+  background: transparent;
+  transition: all 0.25ms ease;
+  text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0, 0, 0, 0.02);
+}
+#carousel #showConnect #btnCloseConnect:hover {
+  transform: scale(1.2);
+}
+#carousel #showConnect .modal-dialog .modal-content {
+  background-image: url("/assets/pict/SteamBackground.png");
+}
+#carousel #showConnect .modal-dialog .modal-content .modal-body .modal-title {
+  font-size: 1.6em;
+  color: azure;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Striker;
+  text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0, 0, 0, 0.02);
+}
+#carousel #showConnect .modal-dialog .modal-content .modal-body form #formConnect {
+  margin-top: -10px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+#carousel #showConnect .modal-dialog .modal-content .modal-body form #formConnect .inputFirst, #carousel #showConnect .modal-dialog .modal-content .modal-body form #formConnect .inputSecond {
+  display: flex;
+  flex-direction: column;
+}
+#carousel #showConnect .modal-dialog .modal-content .modal-body form #formConnect .inputFirst input, #carousel #showConnect .modal-dialog .modal-content .modal-body form #formConnect .inputSecond input {
+  font-family: Emizen;
+}
+#carousel #showConnect .modal-dialog .modal-content .modal-body form #formConnect .inputFirst .alert, #carousel #showConnect .modal-dialog .modal-content .modal-body form #formConnect .inputSecond .alert {
+  height: 40px;
+}
+#carousel #showConnect .modal-dialog .modal-content .modal-body form #formConnect .inputFirst .alert p, #carousel #showConnect .modal-dialog .modal-content .modal-body form #formConnect .inputSecond .alert p {
+  margin-top: -10px;
+}
+#carousel #showConnect .modal-dialog .modal-content .modal-body form #listBtnConnect {
+  margin-top: 10px;
+}
+#carousel #showConnect .modal-dialog .modal-content .modal-body #alertSuccess, #carousel #showConnect .modal-dialog .modal-content .modal-body #alertError {
+  height: 40px;
+}
+#carousel #showConnect .modal-dialog .modal-content .modal-body #alertSuccess p, #carousel #showConnect .modal-dialog .modal-content .modal-body #alertError p {
+  margin-top: -10px;
+}
+#carousel #showSignUp #btnCloseSignUp {
+  font-size: 1.9em;
+  color: azure;
+  border: transparent;
+  background: transparent;
+  transition: all 0.25ms ease;
+  text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0, 0, 0, 0.02);
+}
+#carousel #showSignUp #btnCloseSignUp:hover {
+  transform: scale(1.2);
+}
+#carousel #showSignUp .modal-dialog {
+  margin: -10px auto;
+}
+#carousel #showSignUp .modal-dialog .modal-content {
+  background-image: url("/assets/pict/SteamBackground.png");
+}
+#carousel #showSignUp .modal-dialog .modal-content .modal-body {
+  margin-top: 0px;
+}
+#carousel #showSignUp .modal-dialog .modal-content .modal-body .modal-title {
+  font-size: 1.6em;
+  color: azure;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Striker;
+  text-shadow: 0 0 5px #980000, 0 0 10px #000000, 0 0 15px #000000, 0 0 55px #ffffff, 2px 2px 2px rgba(0, 0, 0, 0.02);
+}
+#carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp {
+  margin-top: -10px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  display: block;
+  display: flex;
+  flex-direction: column;
+}
+#carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputFirst {
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+#carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputFirst .inputFirst, #carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputFirst .inputSecond {
+  display: flex;
+  flex-direction: column;
+}
+#carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputFirst .inputFirst input, #carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputFirst .inputSecond input {
+  font-family: Emizen;
+}
+#carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputFirst .inputFirst .alert, #carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputFirst .inputSecond .alert {
+  height: 40px;
+}
+#carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputFirst .inputFirst .alert p, #carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputFirst .inputSecond .alert p {
+  margin-top: -10px;
+}
+#carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputSecond {
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+#carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputSecond .inputThird, #carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputSecond .inputFour {
+  display: flex;
+  flex-direction: column;
+}
+#carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputSecond .inputThird input, #carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputSecond .inputFour input {
+  font-family: Emizen;
+}
+#carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputSecond .inputThird #phoneAlert, #carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputSecond .inputFour #phoneAlert {
+  height: 60px;
+}
+#carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputSecond .inputThird #phoneAlert p, #carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputSecond .inputFour #phoneAlert p {
+  margin-top: -10px;
+}
+#carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputSecond .inputThird #passAlert, #carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputSecond .inputFour #passAlert {
+  height: 40px;
+}
+#carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputSecond .inputThird #passAlert p, #carousel #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputSecond .inputFour #passAlert p {
+  margin-top: -10px;
+}
+#carousel #showSignUp .modal-dialog .modal-content .modal-body form #listBtnSignUp {
+  margin-top: 10px;
+}
+#carousel #showSignUp .modal-dialog .modal-content .modal-body #alertSuccess, #carousel #showSignUp .modal-dialog .modal-content .modal-body #alertError {
+  height: 40px;
+}
+#carousel #showSignUp .modal-dialog .modal-content .modal-body #alertSuccess p, #carousel #showSignUp .modal-dialog .modal-content .modal-body #alertError p {
+  margin-top: -10px;
+}
 
 @media screen and (max-width: 1440px) {
-  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .navbar-brand {
-    margin-left: 65px;
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar #btnBar {
+    left: 97%;
   }
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo .infoPrice {
     top: 50%;
@@ -265,8 +482,8 @@ body {
   }
 }
 @media screen and (max-width: 1024px) {
-  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .navbar-brand {
-    margin-left: 0px;
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar #btnBar {
+    left: 96%;
   }
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo {
     top: 54%;
@@ -287,20 +504,6 @@ body {
   #carousel .containSearch .showSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .info {
     max-width: 330px;
   }
-  #carousel #release .listBestMoments .list {
-    display: flex;
-    flex-direction: column;
-  }
-  #carousel #release .listBestMoments .list .col-lg-6 {
-    text-align: center;
-  }
-  #carousel #release .listBestMoments .list .col-lg-6 .best {
-    width: 770px;
-  }
-  #carousel #release .listBestMoments .list .col-lg-6 .next {
-    width: 640px;
-    margin-right: 180px;
-  }
   #carousel #release .listBestMoments .containMoments .showGames .games {
     margin-right: 14%;
     max-width: 750px;
@@ -310,17 +513,9 @@ body {
     padding-right: 20px;
   }
 }
-@media screen and (max-width: 970px) {
-  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar {
-    width: 85%;
-  }
-}
 @media screen and (max-width: 768px) {
-  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar {
-    width: 93%;
-  }
-  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid #btnBar {
-    margin-right: -50px;
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar #btnBar {
+    left: 95%;
   }
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo {
     left: 50%;
@@ -349,14 +544,22 @@ body {
   #carousel .containSearch .showSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .img-fluid {
     height: 350px;
   }
+  #carousel #release .listBestMoments .list {
+    -moz-column-gap: 70px;
+         column-gap: 70px;
+    text-align: center;
+  }
+  #carousel #release .listBestMoments .list .best, #carousel #release .listBestMoments .list .next {
+    font-size: 1.3em;
+  }
   #carousel #release .listBestMoments .containMoments .showGames .games {
-    height: 345px;
+    height: 375px;
     overflow: auto;
     max-width: 400px;
     margin-right: 170px;
   }
   #carousel #release .listBestMoments .containMoments .showGames .games .col-lg-4 .img-fluid {
-    height: 320px;
+    height: 370px;
     margin: 10px 0px 10px 0px;
   }
   #carousel #release footer {
@@ -365,15 +568,8 @@ body {
   }
 }
 @media screen and (max-width: 425px) {
-  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid .navbar-brand {
-    font-size: 2.4em;
-    display: block;
-    margin-right: -15px;
-    margin: auto;
-    padding-left: 15px;
-  }
-  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar .container-fluid #btnBar {
-    margin-right: -35px;
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar #btnBar {
+    left: 91%;
   }
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo {
     top: 56%;
@@ -405,25 +601,52 @@ body {
   #carousel .containSearch .showSearch .listResults .resultSearch .col-lg-3 .row .col-lg-12 .img-fluid {
     height: 320px;
   }
-  #carousel #release .listBestMoments {
-    height: 350px;
-  }
-  #carousel #release .listBestMoments .list .col-lg-6 .best {
-    width: 390px;
-  }
-  #carousel #release .listBestMoments .list .col-lg-6 .next {
-    width: 360px;
-    margin-left: 10px;
+  #carousel #release .listBestMoments .list {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
   }
   #carousel #release .listBestMoments .containMoments .showGames .games {
-    margin-right: -30px;
-    max-width: 600px;
+    height: 360px;
+    margin-right: 140px;
   }
   #carousel #release .listBestMoments .containMoments .showGames .games .col-lg-4 .img-fluid {
-    max-width: 340px;
+    height: 350px;
+    margin: 10px auto;
+    display: block;
+    padding-left: 10px;
+    max-width: 310px;
+  }
+  #carousel #release footer {
+    margin-top: 10px;
+  }
+  #showConnect .modal-dialog .modal-content .modal-body form #formConnect .inputFirst .alert p, #showConnect .modal-dialog .modal-content .modal-body form #formConnect .inputSecond .alert p {
+    font-size: 0.8em;
+    text-align: center;
+  }
+  #showConnect .modal-dialog .modal-content .modal-body .alert-danger p, #showConnect .modal-dialog .modal-content .modal-body .alert-success p {
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: -12px;
+  }
+  #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputFirst .inputFirst .alert p, #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputFirst .inputSecond .alert p {
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: -13px;
+  }
+  #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputSecond .inputThird .alert p, #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputSecond .inputFour .alert p {
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: -13px;
+  }
+  #showSignUp .modal-dialog .modal-content .modal-body .alert-danger p, #showSignUp .modal-dialog .modal-content .modal-body .alert-success p {
+    text-align: center;
+    margin-top: -12px;
   }
 }
 @media screen and (max-width: 375px) {
+  #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .navbar #btnBar {
+    left: 89%;
+  }
   #carousel #carouselGaming .carousel-inner .carousel-item .containGaming .moreInfo {
     top: 55%;
     left: 48%;
@@ -448,15 +671,15 @@ body {
   #carousel #release .listBestMoments {
     height: 350px;
   }
-  #carousel #release .listBestMoments .list .col-lg-6 .best {
-    width: 350px;
+  #carousel #release .listBestMoments .list {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
   }
-  #carousel #release .listBestMoments .list .col-lg-6 .next {
-    width: 360px;
-    margin-left: -5px;
+  #carousel #release .listBestMoments .list .best, #carousel #release .listBestMoments .list .next {
+    font-size: 1.1em;
   }
   #carousel #release .listBestMoments .containMoments .showGames .games {
-    height: 345px;
+    height: 375px;
     margin: -10px auto;
     margin-right: 0px;
     max-width: 600px;
@@ -464,7 +687,7 @@ body {
   #carousel #release .listBestMoments .containMoments .showGames .games .col-lg-4 .img-fluid {
     margin: 15px auto;
     display: block;
-    height: 320px;
+    height: 360px;
     max-width: 240px;
   }
   #showSearch {
@@ -475,6 +698,30 @@ body {
   }
   #showSearch .offcanvas-body .d-flex {
     max-width: 95%;
+  }
+  #showConnect .modal-dialog .modal-content .modal-body form #formConnect .inputFirst .alert p, #showConnect .modal-dialog .modal-content .modal-body form #formConnect .inputSecond .alert p {
+    font-size: 0.7em;
+    text-align: center;
+    margin-top: -15px;
+  }
+  #showConnect .modal-dialog .modal-content .modal-body .alert-danger p, #showConnect .modal-dialog .modal-content .modal-body .alert-success p {
+    font-size: 0.7em;
+    text-align: center;
+  }
+  #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputFirst .inputFirst .alert p, #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputFirst .inputSecond .alert p {
+    font-size: 0.7em;
+    text-align: center;
+    margin-top: -13px;
+  }
+  #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputSecond .inputThird .alert p, #showSignUp .modal-dialog .modal-content .modal-body form #formSignUp .listInputSecond .inputFour .alert p {
+    font-size: 0.7em;
+    text-align: center;
+    margin-top: -13px;
+  }
+  #showSignUp .modal-dialog .modal-content .modal-body .alert-danger p, #showSignUp .modal-dialog .modal-content .modal-body .alert-success p {
+    font-size: 0.7em;
+    text-align: center;
+    margin-top: -12px;
   }
 }
 @media screen and (max-width: 320px) {
@@ -526,13 +773,13 @@ body {
     margin-left: 0px;
   }
   #carousel #release .listBestMoments .containMoments .showGames .games {
-    height: 290px;
+    height: 390px;
     margin: -10px auto;
     margin-right: 10px;
     max-width: 600px;
   }
   #carousel #release .listBestMoments .containMoments .showGames .games .col-lg-4 .img-fluid {
-    height: 270px;
+    height: 370px;
     max-width: 270px;
   }
   #carousel #release footer {

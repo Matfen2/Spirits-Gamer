@@ -1,12 +1,8 @@
 <section id="release" [style.background-image]="selectedBackground">
   <div class="listBestMoments">
-    <div class="row list">
-      <div class="col-lg-6">
+    <div class="d-flex list">
         <p class="best" (click)="showMoments('sold')">Meilleures Ventes</p>
-      </div>
-      <div class="col-lg-6">
         <p class="next" (click)="showMoments('release')">Prochaines sorties</p>
-      </div>
     </div>
     <div class="containMoments" [ngSwitch]="moments">
       <div class="showGames" *ngSwitchCase="'sold'">

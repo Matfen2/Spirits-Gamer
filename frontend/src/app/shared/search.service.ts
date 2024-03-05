@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class SearchService {
   constructor(private _http: HttpClient) {}
 
-  apiUrl = 'https://spirits-gamer-backend-66b4384eff65.herokuapp.com/games';
+  apiUrl = 'https://spirits-gamer-backend-48ba22c3397f.herokuapp.com/games';
 
   // SEARCH
   getGames(title: any): Observable<any> {

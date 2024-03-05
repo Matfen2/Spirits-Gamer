@@ -4,9 +4,7 @@
       <div class="carousel-item" *ngFor="let tendance of tendances; let first = first" [class.active]="first">
         <div class="containGaming" [style.background-image]="'url(' + tendance.background + ')'">
           <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid d-flex justify-content-between align-items-center">
-              <a class="navbar-brand" [routerLink]="'/main'">SPIRIT'S GAMER</a>
-            </div>
+            <button type="button" id="btnBar" data-bs-toggle="offcanvas" data-bs-target="#showCanvas"><i class="fas fa-bars"></i></button>
           </nav>
           <div class="moreInfo">
             <img [src]="tendance.logo" class="img-fluid w-100" alt="gameLogo" />
@@ -83,5 +81,31 @@
     </div>
   </div>
   <app-release></app-release>
+
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="showCanvas">
+    <button type="button" id="btnCloseCanvas" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fas fa-times"></i></button>
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="showCanvasLabel">SPIRIT'S GAMER</h5>
+    </div>
+    <div class="offcanvas-body">
+      <div class="containNav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            JEUX
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item category" href="#">CATEGORY</a></li>
+            <li><a class="dropdown-item next" href="#">PROCHAINS SORTIS</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">LISTE DE SOUHAITS</a>
+        </li>
+      </div>
+      <button type="button" id="btnConnect" data-bs-toggle="modal" data-bs-target="#showConnect">CONNECTION</button>
+    </div>
+  </div>
+  <app-connect></app-connect>
 </section>
 
