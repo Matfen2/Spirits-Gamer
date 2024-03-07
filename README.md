@@ -1,27 +1,67 @@
-# Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+# Spirits Gamer
 
-## Development server
+Second Single Page Application
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Authors
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [@matfen](https://github.com/Matfen2)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Deployment
 
-## Running unit tests
+Déployer sur le site vercel 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Features
+- ANIMATIONS
+- FILTRES DYNAMIQUES
+- RECHERCHE DES RESULTATS TIRES DU DATABASE POSTE SUR HOSTINGER
+- CONNEXION AVEC LA BASE DE DONNEES HORS LOCAL (heroku/hostinger)
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Installation
 
-## Further help
+Créer un projet avec 
+    ng new Spirits-Gamer --no-standalone --style=css
+    ng serve pour lancer le site http://localhost:42000/
+    
+Déploiement via vercel avec 
+    vercel
+    cliquer le lien du site crée
+## Run Locally
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Initialiser le git
+```bash
+  git init 
+  git add .
+```
+
+Faire le commit 
+```bash
+  git commit -m "deploy-site" avec la description de chaque commit
+```
+
+Aller à la source du projet
+
+```bash
+  cd "H:\Développeur Web\SpiritsGamer"
+```
+
+Installer les dépendences
+
+```bash
+  npm install bootstrap
+```
+
+Allumer le serveur
+
+```bash
+  ng serve
+```
+
+
+## Tech Stack
+
+**Client:** Angular, Typescript, HTML, CSS, SASS, BOOTSTRAP
+
